@@ -8,7 +8,7 @@
 
 ## Ccылка на репозиторий 
 
-- 
+- https://anna-gorgulenko.github.io/movies-explorer-api/
 
 ## Статус
 
