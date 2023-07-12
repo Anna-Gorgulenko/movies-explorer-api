@@ -8,9 +8,7 @@ const {
   fetchCurrentUser, modifyUserProfile,
 } = require('../controllers/users');
 
-const { fetchCurrentUserValidator, modifyUserProfileValidator } = require('../middlewares/validation');
-
-userRouter.get('/users/me', fetchCurrentUserValidator, fetchCurrentUser);
-userRouter.patch('/users/me', modifyUserProfileValidator, modifyUserProfile);
+userRouter.get('/users/me', fetchCurrentUser);
+userRouter.patch('/users/me', modifyUserProfile);
 
 module.exports = userRouter;

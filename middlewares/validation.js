@@ -50,30 +50,12 @@ const deleteMovieValidator = celebrate({
   }),
 });
 
-// Валидатор для проверки данных при получении данных о пользователе.
-const fetchCurrentUserValidator = celebrate({
-  params: Joi.object().keys({
-    userId: Joi.string().hex().length(24),
-  }),
-});
-
-// Валидатор для проверки данных при обновлении информации о пользователе.
-const modifyUserProfileValidator = celebrate({
-  body: Joi.object().keys({
-    name: Joi.string().required().min(2).max(30),
-    email: Joi.string()
-      .required()
-      .email({ tlds: { allow: false } }),
-  }),
-});
-
 // Экспорт констант валидаторов для дальнейшего использования
 // в других частях приложения
 module.exports = {
   loginValidator,
   createUserValidator,
   createMovieValidator,
-  fetchCurrentUserValidator,
   deleteMovieValidator,
-  modifyUserProfileValidator,
+
 };
